@@ -1,0 +1,311 @@
+# HTML5 Desde Cero
+
+# 📖 Capítulo 002 - Estructura de un documento HTML
+
+En el capítulo anterior conocimos qué es HTML y para qué se utiliza.
+
+Ahora veremos cómo está organizado un documento HTML5. Todas las páginas web comparten una estructura similar, independientemente de su tamaño o complejidad.
+
+Comprender esta estructura es el primer paso para crear sitios web correctamente.
+
+---
+
+# 🎯 ¿Qué aprenderás?
+
+- Qué es `<!DOCTYPE html>`.
+- Para qué sirve la etiqueta `<html>`.
+- Qué información contiene el `<head>`.
+- Dónde se encuentra el contenido visible de la página.
+- Qué función cumplen las etiquetas semánticas principales.
+
+---
+
+# 🧩 Estructura de un documento HTML
+
+Todo documento HTML está compuesto por varias partes.
+
+| Etiqueta | Función |
+|----------|----------|
+| `<!DOCTYPE html>` | Indica al navegador que el documento utiliza HTML5. |
+| `<html>` | Es el elemento raíz que contiene toda la página. |
+| `<head>` | Contiene información para el navegador y los buscadores. |
+| `<body>` | Contiene todo el contenido visible para el usuario. |
+| `<header>` | Encabezado principal de la página. |
+| `<main>` | Contenido principal del documento. |
+| `<section>` | Agrupa contenido relacionado. |
+| `<article>` | Representa contenido independiente. |
+| `<aside>` | Información complementaria al contenido principal. |
+| `<footer>` | Pie de página. |
+
+---
+
+# 💻 Código completo
+
+```html
+<!DOCTYPE html>
+
+<!-- Indica al navegador que el documento utiliza HTML5 -->
+
+<!-- Indica que el contenido de la página está en español -->
+<html lang="es">
+
+<head>
+
+    <!--
+        Las etiquetas <meta> proporcionan información
+        sobre la página al navegador y a los motores de búsqueda.
+    -->
+
+    <!-- Permite mostrar correctamente caracteres especiales -->
+    <meta charset="UTF-8">
+
+    <!-- Hace que la página sea responsive en celulares y tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Texto que aparece en la pestaña del navegador -->
+    <title>Mi primera página web</title>
+
+</head>
+
+<body>
+
+    <!-- Encabezado principal de la página -->
+    <header>
+
+        <h1>Mi primera página web</h1>
+
+    </header>
+
+    <!-- Contenido principal del documento -->
+    <main>
+
+        <h2>Bienvenidos</h2>
+
+        <p>
+            Esta página muestra la estructura básica
+            de un documento HTML5.
+        </p>
+
+        <!-- Agrupa contenido relacionado -->
+        <section>
+
+            <!-- Contenido independiente que podría reutilizarse -->
+            <article>
+
+                <h2>¿Qué es HTML?</h2>
+
+                <p>
+                    HTML es el lenguaje de marcado utilizado
+                    para organizar el contenido de una página web.
+                </p>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- Información complementaria al contenido principal -->
+    <aside>
+
+        <h3>Dato adicional</h3>
+
+        <p>
+            Las etiquetas semánticas ayudan a los navegadores,
+            buscadores y lectores de pantalla a comprender
+            mejor la estructura del documento.
+        </p>
+
+    </aside>
+
+    <!-- Pie de página -->
+    <footer>
+
+        <p>
+            Creado por Jonatan Jubert
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```
+
+---
+
+# 🔍 Explicación del código
+
+### `<!DOCTYPE html>`
+
+Le indica al navegador que el documento utiliza la versión HTML5.
+
+---
+
+### `<html lang="es">`
+
+Es el elemento raíz del documento.
+
+El atributo `lang="es"` informa que el contenido está escrito en español, mejorando la accesibilidad y el posicionamiento en buscadores.
+
+---
+
+### `<head>`
+
+Contiene información sobre la página que normalmente no ve el usuario.
+
+Aquí se incluyen elementos como:
+
+- título
+- codificación
+- descripción
+- hojas de estilo
+- scripts
+- favicon
+
+---
+
+### `<meta charset="UTF-8">`
+
+Permite visualizar correctamente caracteres especiales como:
+
+```
+á é í ó ú ñ ¿ ¡
+```
+
+---
+
+### `<meta name="viewport">`
+
+Hace que la página se adapte correctamente a dispositivos móviles.
+
+---
+
+### `<title>`
+
+Es el texto que aparece en la pestaña del navegador.
+
+También es utilizado por los motores de búsqueda.
+
+---
+
+### `<body>`
+
+Todo lo que el usuario ve en pantalla debe estar dentro del `<body>`.
+
+---
+
+### `<header>`
+
+Representa el encabezado principal de la página.
+
+Generalmente contiene:
+
+- logo
+- nombre del sitio
+- menú de navegación
+
+---
+
+### `<main>`
+
+Contiene el contenido principal del documento.
+
+Solo debería existir un `<main>` por página.
+
+---
+
+### `<section>`
+
+Agrupa contenido relacionado bajo un mismo tema.
+
+---
+
+### `<article>`
+
+Representa contenido independiente.
+
+Por ejemplo:
+
+- una noticia
+- una publicación
+- un comentario
+- un artículo de blog
+
+---
+
+### `<aside>`
+
+Incluye información complementaria.
+
+Puede contener:
+
+- publicidad
+- enlaces relacionados
+- información adicional
+- biografía del autor
+
+---
+
+### `<footer>`
+
+Representa el pie de página.
+
+Suele incluir:
+
+- autor
+- contacto
+- copyright
+- redes sociales
+
+---
+
+# 🖥 Resultado
+
+La página mostrará:
+
+```
+Mi primera página web
+
+Bienvenidos
+
+Esta página muestra la estructura básica de un documento HTML5.
+
+¿Qué es HTML?
+
+HTML es el lenguaje de marcado utilizado para organizar el contenido de una página web.
+
+Dato adicional
+
+Las etiquetas semánticas ayudan a los navegadores,
+buscadores y lectores de pantalla a comprender mejor la estructura del documento.
+
+Creado por Jonatan Jubert
+```
+
+---
+
+# 💡 Ejercicio
+
+Modificá el ejemplo anterior para que:
+
+- Cambie el título de la página.
+- Agregue un segundo `<article>`.
+- Modifique el contenido del `<aside>`.
+- Personalice el texto del `<footer>` con tu nombre.
+
+---
+
+# 📌 ¿Sabías que?
+
+Las etiquetas semánticas como `<header>`, `<main>`, `<article>` y `<footer>` fueron incorporadas en **HTML5** para que los navegadores, motores de búsqueda y lectores de pantalla puedan comprender mejor la estructura del contenido.
+
+Gracias a ellas, un sitio web es más accesible y mejora su posicionamiento (SEO).
+
+---
+
+# 🚀 Próximo capítulo
+
+**Capítulo 003 - Títulos y párrafos**
+
+Aprenderemos a utilizar las etiquetas `<h1>` a `<h6>` y `<p>` para comenzar a construir el contenido de nuestras páginas web.
