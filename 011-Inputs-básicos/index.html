@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 011 — Inputs básicos</title>
+</head>
+<body>
+  <header>
+    <p>HTML5 desde cero — Capítulo 011</p>
+    <h1>Inputs básicos</h1>
+  </header>
+
+  <main>
+    <p>Explorá los tipos de campo y recorré el formulario con la tecla Tab.</p>
+    <p>Los campos Nombre y Email son obligatorios.</p>
+
+    <!-- Demostración de controles: no incluye botón de envío ni backend. -->
+    <form>
+      <fieldset>
+        <legend>Datos de práctica</legend>
+
+        <!-- for e id vinculan cada etiqueta con su campo. -->
+        <p>
+          <label for="nombre">Nombre (obligatorio):</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </p>
+
+        <p>
+          <label for="email">Email (obligatorio):</label>
+          <input type="email" id="email" name="email" required>
+        </p>
+
+        <!-- number representa una cantidad, no un teléfono. -->
+        <p>
+          <label for="edad">Edad:</label>
+          <input type="number" id="edad" name="edad" min="0" step="1">
+        </p>
+
+        <!-- password oculta caracteres; no cifra ni guarda el dato. -->
+        <p>
+          <label for="clave">Contraseña de práctica:</label>
+          <input type="password" id="clave" name="clave"
+                 autocomplete="new-password" aria-describedby="ayuda-clave">
+          <small id="ayuda-clave">Usá un texto inventado para este ejercicio.</small>
+        </p>
+
+        <p>
+          <label for="nacimiento">Fecha de nacimiento:</label>
+          <input type="date" id="nacimiento" name="nacimiento">
+        </p>
+
+        <p>
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono">
+        </p>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer>
+    <p>Jonatan Jubert — Learning HTML5 — 11/40</p>
+  </footer>
+</body>
+</html>
