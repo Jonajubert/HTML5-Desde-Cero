@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 012 — Labels y accesibilidad</title>
+</head>
+
+<body>
+  <header>
+    <p>HTML5 desde cero — Capítulo 012</p>
+    <h1>Labels y accesibilidad</h1>
+  </header>
+
+  <main>
+    <p>
+      Hacé clic en las etiquetas y recorré los controles con Tab.
+      Para volver al control anterior, usá Shift + Tab.
+    </p>
+
+    <p>
+      Este formulario es de práctica. Usá datos de ejemplo.
+      No incluye botón de envío ni procesamiento de información.
+    </p>
+
+    <form>
+      <!-- fieldset agrupa controles y legend identifica el grupo. -->
+      <fieldset>
+        <legend>Datos de contacto</legend>
+
+        <!-- for debe coincidir exactamente con el id del input. -->
+        <p>
+          <label for="nombre">Nombre:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            autocomplete="name">
+        </p>
+
+        <!-- La etiqueta identifica el campo. -->
+        <p>
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            aria-describedby="ayuda-email">
+        </p>
+
+        <!-- aria-describedby conecta el campo con esta ayuda. -->
+        <p id="ayuda-email">
+          Ejemplo: persona@example.com
+        </p>
+
+        <!-- El placeholder es una pista, no reemplaza al label. -->
+        <p>
+          <label for="ciudad">Ciudad:</label>
+          <input
+            type="text"
+            id="ciudad"
+            name="ciudad"
+            placeholder="Por ejemplo: Eldorado">
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferencias</legend>
+
+        <!-- El texto asociado también permite activar la casilla. -->
+        <p>
+          <input
+              type="checkbox"
+              id="novedades"
+              name="novedades"
+              value="si">
+
+          <label for="novedades">
+            Quiero recibir novedades.
+          </label>
+        </p>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer>
+    <p>Jonatan Jubert — Learning HTML5 — 12/40</p>
+  </footer>
+</body>
+
+</html>
